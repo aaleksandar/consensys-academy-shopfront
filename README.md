@@ -1,29 +1,27 @@
-# truffle-init-webpack
-Example webpack project with Truffle. Includes contracts, migrations, tests, user interface and webpack build pipeline.
+# ConsenSys Academy Shopfront
 
-## Usage
+## The project will start as a database whereby
 
-To initialize a project with this example, run `truffle init webpack` inside an empty directory.
+- As an administrator, you can add products, which consist of an id, a price and a stock.
+- As a regular user you can buy 1 of the products.
+- As the owner you can make payments or withdraw value from the contract.
 
-## Building and the frontend
+## Eventually, you will refactor it to include
 
-1. First run `truffle compile`, then run `truffle migrate` to deploy the contracts onto your network of choice (default "development").
-1. Then run `npm run dev` to build the app and serve it on http://localhost:8080
+- Ability to remove products.
+- Co-purchase by different people.
+- Add merchants akin to what Amazon has become.
+- Add the ability to pay with a third-party token.
 
-## Possible upgrades
+## Hub and spoke
 
-* Use the webpack hotloader to sense when contracts or javascript have been recompiled and rebuild the application. Contributions welcome!
+- The hub would deploy the spokes
+- Either the spokes send a sliver of the payment to the hub
+- Or the hub keeps a cut of the payment
+- How about a central sku repository for the shop(s)?
 
-## Common Errors
+## Make your HTML and Javascript portable so that it works
 
-* **Error: Can't resolve '../build/contracts/MetaCoin.json'**
-
-This means you haven't compiled or migrated your contracts yet. Run `truffle compile` and `truffle migrate` first.
-
-Full error:
-
-```
-ERROR in ./app/main.js
-Module not found: Error: Can't resolve '../build/contracts/MetaCoin.json' in '/Users/tim/Documents/workspace/Consensys/test3/app'
- @ ./app/main.js 11:16-59
-```
+- In a regular browser, with a local Geth
+- in Mist
+- with Metamask and a public Geth
